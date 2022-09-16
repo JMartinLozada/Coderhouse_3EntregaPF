@@ -1,0 +1,27 @@
+  <h1 style="font-size: 10mm;">Listado de productos</h1><br>
+  
+  {{#if producto}}
+  <table class="table">
+      <thead class="table-dark">
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Foto</th>
+      </thead>
+      <tbody>
+          {{#each producto }}
+          <tr class="table-primary">
+              <td>{{./title }}</td>
+              <td>{{./price }}</td>
+              <td><img style="width: 50px; height:50px" src={{./thumbnail }} alt=""></td>
+          </tr>
+          {{/each }}
+      </tbody>
+  </table>
+  {{else }}
+  <p>No hay productos</p><br>
+  {{/if }}
+  <hr>
+
+  <a href="/user/logout"><input type="button" value="Logout"></a>
+
+  
